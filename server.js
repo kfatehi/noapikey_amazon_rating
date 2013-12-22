@@ -6,11 +6,15 @@ jquery = "http://0.0.0.0:"+port+"/vendor/jquery.js",
 Amazon = require(__dirname+"/lib/amazon.js"),
 amazon = new Amazon(jsdom, jquery);
 
-app.get('/amazon/search/:keywords', function(req,res) {
-  amazon.search(req.params.keywords, function(err, results) {
-    if (err) res.send(500);
-    else res.json(results);
-  })
+app.get('/amazon/:method/:keywords', function(req,res) {
+  var action = amazon[req.params.method];
+  if (action) 
+    action(req.params.keywords, function(err, results) {
+      if (err) res.send(500);
+      else res.json(results);
+    });
+  else res.send(404);
 });
+
 app.use("/vendor", express.static(__dirname+"/vendor"));
 app.listen(port);
