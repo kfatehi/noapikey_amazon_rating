@@ -1,4 +1,9 @@
-# Why?
+noapikey_amazon_rating
+======================
+
+Amazon product rating API
+
+## Why?
 
 Amazon doesn't give us an API for retrieving product ratings.
 Often while browsing other websites I need to copy paste the product
@@ -14,13 +19,13 @@ of these used an API key whereas I think in this case being
 anonymous/using no API key is better -- in any case for getting ratings
 data there is no API access anyway.
 
-# Userscripts
+## Userscripts
 
 Comes with a Frys.com userscript that makes use of the API/service
 
-# API Usage Example
+## API Usage Example
 
-## Search Amazon
+### Search Amazon
 
   I had to add this first before I could get to the ratings data, as I
 decided to scrape the mobile site rather than the full site (~2 seconds
@@ -57,7 +62,7 @@ time curl localhost:1337/amazon/search/Blueair%20403%20HepaSilent%20Air-Purifica
 ]curl   0.01s user 0.01s system 1% cpu 1.170 total
 ```
 
-## Get Product Rating
+### Get Product Rating
 
 This one uses the Search method above internally and returns the first result
 except with more product data, specifically rating data. This means it
