@@ -20,8 +20,8 @@ function template() {
 }
 
 function AmazonRatingURL(k) {
-  //return "http://amazon-rating-api.herokuapp.com/amazon/rating/"+k; 
-  return "http://127.0.0.1:1337/amazon/rating/"+k;
+  return "http://amazon-rating-api.herokuapp.com/amazon/rating/"+k; 
+  //return "http://127.0.0.1:1337/amazon/rating/"+k;
 }
 
 function eachProductLink(callback) {
