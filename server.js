@@ -18,3 +18,5 @@ app.get('/amazon/:method/:keywords', function(req,res) {
 
 app.use("/vendor", express.static(__dirname+"/vendor"));
 app.listen(port);
+
+console.log("Listening on port "+port);

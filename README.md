@@ -21,11 +21,20 @@ data there is no API access anyway.
 
 ## Userscripts
 
-Comes with a Frys.com userscript that makes use of the API/service
+Comes with a Frys.com userscript that makes use of the API/service.
 
-## API Usage Example
+## Install
 
-### Search Amazon
+0. Pull the code down to a server somewhere (or locally)
+0. Start the server, using an environment variable for the port: `PORT=8087 node server.js`
+
+## Usage
+
+The app provides two HTTP GET routes: /amazon/search/* and /amazon/rating/* each returns JSON.
+
+## Examples
+
+### Search
 
   I had to add this first before I could get to the ratings data, as I
 decided to scrape the mobile site rather than the full site (~2 seconds
@@ -62,7 +71,7 @@ time curl localhost:1337/amazon/search/Blueair%20403%20HepaSilent%20Air-Purifica
 ]curl   0.01s user 0.01s system 1% cpu 1.170 total
 ```
 
-### Get Product Rating
+### Get Rating
 
 This one uses the Search method above internally and returns the first result
 except with more product data, specifically rating data. This means it
