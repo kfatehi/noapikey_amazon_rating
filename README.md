@@ -68,7 +68,8 @@ time curl localhost:1337/amazon/search/Blueair%20403%20HepaSilent%20Air-Purifica
     "price": "$499.95",
     "url": "http://www.amazon.com/gp/aw/d/B0000668C1/ref=mp_s_a_1_5/192-6657742-1570763?qid=1387685779&sr=8-5"
   }
-]curl   0.01s user 0.01s system 1% cpu 1.170 total
+]
+curl   0.01s user 0.01s system 1% cpu 1.170 total
 ```
 
 ### Get Rating
@@ -90,7 +91,8 @@ $ time curl localhost:1337/amazon/rating/Blueair%20403%20HepaSilent%20Air-Purifi
     5
   ],
   "ratingPercent": 90
-}curl   0.00s user 0.00s system 0% cpu 1.721 total
+}
+curl   0.00s user 0.00s system 0% cpu 1.721 total
 ```
 
 ## Thanks
